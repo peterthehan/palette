@@ -1,9 +1,8 @@
 const fs = require('fs');
 const Palette = require('./palette.js');
 
-const FILE = '3.jpg';
+const FILE = '1.jpg';
 const BUCKETS = 3;
-let t0 = performance.now();
 Palette.load(FILE)
   .then((pixels) => Palette.medianCut(pixels, BUCKETS))
   .then((buckets) => Palette.sortByLuminance(buckets))
@@ -35,6 +34,4 @@ Palette.load(FILE)
 </html>`;
 
     fs.writeFileSync(`./palettes-${FILE}.html`, template, 'utf8');
-    let t1 = performance.now();
-    console.log(`Took ${t1 - t0} ms`);
   });
