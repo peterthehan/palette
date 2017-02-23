@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Palette = require('./palette.js');
 
-const FILE = '1.jpg';
+const FILE = 'https://pbs.twimg.com/media/C5Kg0Z3VMAAgl-h.jpg';
 const BUCKETS = 3;
 Palette.load(FILE)
   .then((pixels) => Palette.medianCut(pixels, BUCKETS))
@@ -33,5 +33,5 @@ Palette.load(FILE)
   </body>
 </html>`;
 
-    fs.writeFileSync(`./palettes-${FILE}.html`, template, 'utf8');
+    fs.writeFileSync(`./palettes.html`, template, 'utf8');
   });
