@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Palette = require('./palette.js');
 
-const FILE = 'https://pbs.twimg.com/media/C5Kg0Z3VMAAgl-h.jpg';
+const FILE = '';
 const BUCKETS = 3;
 Palette.load(FILE)
   .then((pixels) => Palette.medianCut(pixels, BUCKETS))
