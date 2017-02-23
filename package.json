@@ -1,0 +1,23 @@
+{
+  "name": "palette",
+  "version": "1.0.0",
+  "description": "Median cut implementation.",
+  "keywords": [
+    "color",
+    "medium",
+    "cut"
+  ],
+  "bugs": {
+    "url": "https://github.com/Johj/palette/issues"
+  },
+  "license": "MIT",
+  "author": "Peter Han",
+  "main": "palette.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Johj/palette.git"
+  },
+  "dependencies": {
+    "get-pixels": "^3.3.0"
+  }
+}
